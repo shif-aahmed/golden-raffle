@@ -132,6 +132,11 @@
   position: relative;
 }
 
+.cart-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .cart-icon {
   position: relative;
   color: #FFC516;

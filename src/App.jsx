@@ -13,6 +13,7 @@ import WaitingCompetitionDetails from "./pages/WaitingCompetitionDetails/Waiting
 import Footer from './components/Footer/Footer'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
+import Cart from './pages/Cart/Cart'
 import './App.css'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
     </Router>
