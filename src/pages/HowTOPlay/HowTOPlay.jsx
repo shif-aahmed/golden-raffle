@@ -1,5 +1,5 @@
 import React from 'react';
-import './HowToPlay.css';
+import './HowTOPlay.css';
 import waveSvg from '../../assets/wave-yellow.svg';
 
 const HowToPlay = () => {
