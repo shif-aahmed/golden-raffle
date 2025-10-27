@@ -6,8 +6,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-main">
         <div className="footer-column">
+          <h3>Home</h3>
           <ul className="footer-links">
-            <li><a href="#home">Home</a></li>
             <li><a href="#competitions">Competitions</a></li>
             <li><a href="#how-to-play">How to Play</a></li>
             <li><a href="#winners">Winners</a></li>

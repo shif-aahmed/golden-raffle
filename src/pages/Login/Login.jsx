@@ -5,18 +5,19 @@ import './Login.css'
 function Login() {
   return (
     <div className="login-page">
-      <div className="login-hero">
-        <div className="login-header">
-          <h1 className="login-title">LOGIN</h1>
+      <section className="login-hero">
+        <div className="login-background"></div>
+        
+        <h1 className="login-title">LOGIN</h1>
+        
+        <div className="login-wave">
+          <img
+            src={waveYellow}
+            alt="Wave"
+            className="login-wave-image"
+          />
         </div>
-        <div className="wave-container">
-          <div className="wave-layer wave-dark-brown"></div>
-          <div className="wave-layer wave-yellow">
-            <img src={waveYellow} alt="Wave" className="wave-svg" />
-          </div>
-          <div className="wave-layer wave-light-gray"></div>
-        </div>
-      </div>
+      </section>
       
       <div className="login-content">
         <div className="login-form-container">

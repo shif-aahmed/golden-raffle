@@ -12,6 +12,7 @@ import WaitingCompetitionDetails from "./pages/WaitingCompetitionDetails/Waiting
 
 import Footer from './components/Footer/Footer'
 import Login from './pages/Login/Login'
+import Register from './pages/Register/Register'
 import './App.css'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/waiting/:id" element={<WaitingCompetitionDetails />} />
 
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </Router>

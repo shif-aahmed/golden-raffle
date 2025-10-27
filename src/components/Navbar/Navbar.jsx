@@ -100,7 +100,7 @@ const Navbar = ({ onNavigate }) => {
                 </svg>
               </span>
             </Link>
-            <button className="btn-register">
+            <Link to="/register" className="btn-register">
               <span className="btn-text">Register</span>
               <span className="btn-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -110,7 +110,7 @@ const Navbar = ({ onNavigate }) => {
                   <line x1="23" y1="11" x2="17" y2="11"></line>
                 </svg>
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -145,7 +145,7 @@ const Navbar = ({ onNavigate }) => {
             <Link to="/previous-winners" className="mobile-nav-link">Winners</Link>
             <div className="mobile-buttons">
               <Link to="/login" className="btn-login mobile-btn">Login</Link>
-              <button className="btn-register mobile-btn">Register</button>
+              <Link to="/register" className="btn-register mobile-btn">Register</Link>
             </div>
           </div>
         </div>
