@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 
@@ -41,29 +42,29 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="navbar-links">
-          <a href="#" className="nav-link active">Home</a>
+          <Link to="/" className="nav-link active">Home</Link>
           <div 
             className="dropdown-container"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <a 
-              href="#" 
+            <Link 
+              to="/competitions" 
               className="nav-link dropdown-trigger"
             >
               Competitions
               <span className="dropdown-arrow">▼</span>
-            </a>
+            </Link>
             {isCompetitionsOpen && (
               <div className="dropdown-menu">
-                <a href="#" className="dropdown-item">Live Competitions</a>
-                <a href="#" className="dropdown-item">Waiting to be Drawn</a>
-                <a href="#" className="dropdown-item">Finished Competitions</a>
+                <Link to="/competitions" className="dropdown-item">Live Competitions</Link>
+                <Link to="/competitions" className="dropdown-item">Waiting to be Drawn</Link>
+                <Link to="/competitions" className="dropdown-item">Finished Competitions</Link>
               </div>
             )}
           </div>
-          <a href="#" className="nav-link">How to Play</a>
-          <a href="#" className="nav-link">Winners</a>
+          <Link to="/how-to-play" className="nav-link">How to Play</Link>
+          <Link to="/winners" className="nav-link">Winners</Link>
         </div>
 
         {/* Right Section - Cart and Mobile Menu */}
@@ -117,10 +118,10 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
           <div className="mobile-menu-content">
-            <a href="#" className="mobile-nav-link">Home</a>
+            <Link to="/" className="mobile-nav-link">Home</Link>
             <div className="mobile-dropdown">
-              <a 
-                href="#" 
+              <Link 
+                to="/competitions" 
                 className="mobile-nav-link dropdown-trigger"
                 onClick={(e) => {
                   e.preventDefault();
@@ -131,17 +132,17 @@ const Navbar = () => {
                 <span className="mobile-dropdown-arrow">
                   {isMobileCompetitionsOpen ? '▲' : '▼'}
                 </span>
-              </a>
+              </Link>
               {isMobileCompetitionsOpen && (
                 <div className="mobile-dropdown-menu">
-                  <a href="#" className="mobile-dropdown-item">Live Competitions</a>
-                  <a href="#" className="mobile-dropdown-item">Waiting to be Drawn</a>
-                  <a href="#" className="mobile-dropdown-item">Finished Competitions</a>
+                  <Link to="/competitions" className="mobile-dropdown-item">Live Competitions</Link>
+                  <Link to="/competitions" className="mobile-dropdown-item">Waiting to be Drawn</Link>
+                  <Link to="/competitions" className="mobile-dropdown-item">Finished Competitions</Link>
                 </div>
               )}
             </div>
-            <a href="#" className="mobile-nav-link">How to Play</a>
-            <a href="#" className="mobile-nav-link">Winners</a>
+            <Link to="/how-to-play" className="mobile-nav-link">How to Play</Link>
+            <Link to="/winners" className="mobile-nav-link">Winners</Link>
             <div className="mobile-buttons">
               <button className="btn-login mobile-btn">Login</button>
               <button className="btn-register mobile-btn">Register</button>
