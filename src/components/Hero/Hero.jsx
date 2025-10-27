@@ -19,7 +19,7 @@ const Hero = () => {
             The home of golden raffle prizes with winners from all over Scotland and across the UK! 
             Make sure you follow us on social media for updates on the latest prize draws!
           </p>
-          <button className="hero-button">
+          <button className="hero-button"  onClick={() => window.location.href = "/live-competition"}>
             Browse Competitions
           </button>
         </div>

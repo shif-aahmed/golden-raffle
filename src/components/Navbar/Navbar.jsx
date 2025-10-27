@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 
-const Navbar = () => {
+const Navbar = ({ onNavigate }) => {
   const [isCompetitionsOpen, setIsCompetitionsOpen] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -57,14 +57,14 @@ const Navbar = () => {
             </Link>
             {isCompetitionsOpen && (
               <div className="dropdown-menu">
-                <Link to="/competitions" className="dropdown-item">Live Competitions</Link>
+                <Link to="/live-competition" className="dropdown-item">Live Competitions</Link>
                 <Link to="/competitions" className="dropdown-item">Waiting to be Drawn</Link>
                 <Link to="/competitions" className="dropdown-item">Finished Competitions</Link>
               </div>
             )}
           </div>
           <Link to="/how-to-play" className="nav-link">How to Play</Link>
-          <Link to="/winners" className="nav-link">Winners</Link>
+          <Link to="/previous-winners" className="nav-link">Winners</Link>
         </div>
 
         {/* Right Section - Cart and Mobile Menu */}
@@ -90,7 +90,7 @@ const Navbar = () => {
 
           {/* Desktop Buttons */}
           <div className="navbar-buttons desktop-only">
-            <button className="btn-login">
+            <Link to="/login" className="btn-login">
               <span className="btn-text">Login</span>
               <span className="btn-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -99,7 +99,7 @@ const Navbar = () => {
                   <line x1="15" y1="12" x2="3" y2="12"></line>
                 </svg>
               </span>
-            </button>
+            </Link>
             <button className="btn-register">
               <span className="btn-text">Register</span>
               <span className="btn-icon">
@@ -135,16 +135,16 @@ const Navbar = () => {
               </Link>
               {isMobileCompetitionsOpen && (
                 <div className="mobile-dropdown-menu">
-                  <Link to="/competitions" className="mobile-dropdown-item">Live Competitions</Link>
+                  <Link to="/live-competition" className="mobile-dropdown-item">Live Competitions</Link>
                   <Link to="/competitions" className="mobile-dropdown-item">Waiting to be Drawn</Link>
                   <Link to="/competitions" className="mobile-dropdown-item">Finished Competitions</Link>
                 </div>
               )}
             </div>
             <Link to="/how-to-play" className="mobile-nav-link">How to Play</Link>
-            <Link to="/winners" className="mobile-nav-link">Winners</Link>
+            <Link to="/previous-winners" className="mobile-nav-link">Winners</Link>
             <div className="mobile-buttons">
-              <button className="btn-login mobile-btn">Login</button>
+              <Link to="/login" className="btn-login mobile-btn">Login</Link>
               <button className="btn-register mobile-btn">Register</button>
             </div>
           </div>

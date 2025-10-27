@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="social-icons">
             <div className="social-icon facebook">f</div>
             <div className="social-icon twitter">t</div>
-            <div className="social-icon instagram">📷</div>
+            <div className="social-icon instagram"></div>
           </div>
         </div>
         

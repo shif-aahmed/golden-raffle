@@ -1,17 +1,17 @@
 /* Competitions and How To Play Section */
-.competitions-how-to-play {
-  background-color: #F8F8F8;
+.home-competitions-how-to-play {
+  background-color: #f8f8f8;
   padding: 80px 20px;
   min-height: 100vh;
 }
 
 /* Live Competitions Section */
-.live-competitions {
+.home-live-competitions {
   text-align: center;
   margin-bottom: 100px;
 }
 
-.section-title {
+.home-section-title {
   font-family: 'Quicksand', sans-serif;
   font-size: 48px;
   font-weight: 700;
@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.section-description {
+.home-section-description {
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -32,11 +32,11 @@
   margin-right: auto;
 }
 
-.no-products {
+.home-no-products {
   margin: 30px 0;
 }
 
-.no-products p {
+.home-no-products p {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -45,8 +45,8 @@
   text-align: center;
 }
 
-.more-competitions-btn {
-  background-color: #FFC516;
+.home-more-competitions-btn {
+  background-color: #ffc516;
   color: rgb(0, 0, 0);
   border: none;
   padding: 16px 32px;
@@ -61,17 +61,17 @@
   margin-top: 20px;
 }
 
-.more-competitions-btn:hover {
-  background-color: #E6B100;
+.home-more-competitions-btn:hover {
+  background-color: #e6b100;
   transform: translateY(-2px);
 }
 
 /* How To Play Section */
-.how-to-play {
+.home-how-to-play {
   text-align: center;
 }
 
-.steps-container {
+.home-steps-container {
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -79,56 +79,55 @@
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.step-card {
-    background-color: #f1f1f1;
-    border-radius: 8px;
-    padding: 40px 30px;
-    text-align: center;
-    width: 300px;
-    position: relative;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  /* left and right cards (1st and 3rd) */
-  .step-card:first-child,
-  .step-card:last-child {
-    height: 250px; /* adjust this to your liking */
-  }
-  
-  /* middle card */
 
-  
-.step-icon {
-    margin-bottom: 25px;
+.home-step-card {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 40px 30px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
-.icon-circle {
+
+/* left and right cards (1st and 3rd) */
+.home-step-card:first-child,
+.home-step-card:last-child {
+  height: 250px;
+}
+
+.home-step-icon {
+  margin-bottom: 25px;
+}
+
+.home-icon-circle {
   width: 100px;
   height: 100px;
-  border:3.5px solid #FFC516;
+  border: 3.5px solid #ffc516;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   color: white;
-  position:absolute;
+  position: absolute;
   top: -3.5rem;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.icon-image {
+.home-icon-image {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
 
-.step-title {
+.home-step-title {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -138,7 +137,7 @@
   letter-spacing: 1px;
 }
 
-.step-description {
+.home-step-description {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -146,69 +145,70 @@
   margin: 0;
   line-height: 1.5;
 }
+
 @media (max-width: 1019px) {
-    .step-card {
-        max-width: 100%;
-        min-width: auto;
-        padding: 30px 20px;
-        margin-bottom: 25px;
-      }
-      .step-card:first-child,
-      .step-card:last-child {
-        height: 273px; /* adjust this to your liking */
-      }
-      
+  .home-step-card {
+    max-width: 100%;
+    min-width: auto;
+    padding: 30px 20px;
+    margin-bottom: 25px;
+  }
+  .home-step-card:first-child,
+  .home-step-card:last-child {
+    height: 273px;
+  }
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
-  .competitions-how-to-play {
+  .home-competitions-how-to-play {
     padding: 60px 20px;
   }
 
-  .section-title {
+  .home-section-title {
     font-size: 36px;
   }
 
-  .section-description {
+  .home-section-description {
     font-size: 16px;
   }
 
-  .steps-container {
+  .home-steps-container {
     flex-direction: column;
     align-items: center;
     gap: 30px;
   }
 
-  .step-card {
+  .home-step-card {
     max-width: 100%;
     min-width: auto;
     padding: 30px 20px;
     margin-bottom: 25px;
   }
 
-  .live-competitions {
+  .home-live-competitions {
     margin-bottom: 80px;
   }
 }
 
 @media (max-width: 480px) {
-  .section-title {
+  .home-section-title {
     font-size: 28px;
   }
 
-  .section-description {
+  .home-section-description {
     font-size: 14px;
   }
 
-  .step-title {
+  .home-step-title {
     font-size: 18px;
   }
 
-  .step-description {
+  .home-step-description {
     font-size: 14px;
   }
 
-  .more-competitions-btn {
+  .home-more-competitions-btn {
     padding: 14px 28px;
     font-size: 16px;
   }
