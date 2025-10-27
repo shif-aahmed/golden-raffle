@@ -90,7 +90,7 @@ const Navbar = ({ onNavigate }) => {
 
           {/* Desktop Buttons */}
           <div className="navbar-buttons desktop-only">
-            <button className="btn-login" onClick={() => onNavigate && onNavigate('login')}>
+            <Link to="/login" className="btn-login">
               <span className="btn-text">Login</span>
               <span className="btn-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -99,7 +99,7 @@ const Navbar = ({ onNavigate }) => {
                   <line x1="15" y1="12" x2="3" y2="12"></line>
                 </svg>
               </span>
-            </button>
+            </Link>
             <button className="btn-register">
               <span className="btn-text">Register</span>
               <span className="btn-icon">
@@ -144,7 +144,7 @@ const Navbar = ({ onNavigate }) => {
             <Link to="/how-to-play" className="mobile-nav-link">How to Play</Link>
             <Link to="/winners" className="mobile-nav-link">Winners</Link>
             <div className="mobile-buttons">
-              <button className="btn-login mobile-btn" onClick={() => onNavigate && onNavigate('login')}>Login</button>
+              <Link to="/login" className="btn-login mobile-btn">Login</Link>
               <button className="btn-register mobile-btn">Register</button>
             </div>
           </div>
