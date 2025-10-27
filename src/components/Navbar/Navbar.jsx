@@ -58,8 +58,8 @@ const Navbar = ({ onNavigate }) => {
             {isCompetitionsOpen && (
               <div className="dropdown-menu">
                 <Link to="/live-competition" className="dropdown-item">Live Competitions</Link>
-                <Link to="/competitions" className="dropdown-item">Waiting to be Drawn</Link>
-                <Link to="/competitions" className="dropdown-item">Finished Competitions</Link>
+                <Link to="/waiting-to-be-drawn" className="dropdown-item">Waiting to be Drawn</Link>
+                <Link to="/finished-competition" className="dropdown-item">Finished Competitions</Link>
               </div>
             )}
           </div>
@@ -136,8 +136,8 @@ const Navbar = ({ onNavigate }) => {
               {isMobileCompetitionsOpen && (
                 <div className="mobile-dropdown-menu">
                   <Link to="/live-competition" className="mobile-dropdown-item">Live Competitions</Link>
-                  <Link to="/competitions" className="mobile-dropdown-item">Waiting to be Drawn</Link>
-                  <Link to="/competitions" className="mobile-dropdown-item">Finished Competitions</Link>
+                  <Link to="/waiting-to-be-drawn" className="mobile-dropdown-item">Waiting to be Drawn</Link>
+                  <Link to="/finished-competition" className="mobile-dropdown-item">Finished Competitions</Link>
                 </div>
               )}
             </div>
