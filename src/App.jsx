@@ -1,34 +1,52 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
+import Login from './components/Login/Login'
 import './App.css'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home')
+
+  const handleNavigation = (page) => {
+    setCurrentPage(page)
+  }
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'login':
+        return <Login />
+      default:
+        return (
+          <main>
+            <h1>Golden Raffle</h1>
+            <p>Welcome to Golden Raffle - Your chance to win amazing prizes!</p>
+          </main>
+        )
+    }
+  }
+
   return (
     <>
-      <Navbar />
+      <Navbar onNavigate={handleNavigation} />
       <div className="app">
-        <main>
-          <h1>Golden Raffle</h1>
-          <p>Welcome to Golden Raffle - Your chance to win amazing prizes!</p>
-        </main>
+        {renderPage()}
         
         <footer className="footer">
           <div className="footer-main">
             <div className="footer-column">
               <ul className="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#competitions">Competitions</a></li>
-                <li><a href="#how-to-play">How to Play</a></li>
-                <li><a href="#winners">Winners</a></li>
+                <li><a href="#home" onClick={() => handleNavigation('home')}>Home</a></li>
+                <li><a href="#competitions" onClick={() => handleNavigation('competitions')}>Competitions</a></li>
+                <li><a href="#how-to-play" onClick={() => handleNavigation('how-to-play')}>How to Play</a></li>
+                <li><a href="#winners" onClick={() => handleNavigation('winners')}>Winners</a></li>
               </ul>
             </div>
             
             <div className="footer-column">
               <h3>About</h3>
               <ul className="footer-links">
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#faqs">FAQs</a></li>
-                <li><a href="#login">Login</a></li>
+                <li><a href="#contact" onClick={() => handleNavigation('contact')}>Contact Us</a></li>
+                <li><a href="#faqs" onClick={() => handleNavigation('faqs')}>FAQs</a></li>
+                <li><a href="#login" onClick={() => handleNavigation('login')}>Login</a></li>
               </ul>
             </div>
             

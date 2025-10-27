@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 
-const Navbar = () => {
+const Navbar = ({ onNavigate }) => {
   const [isCompetitionsOpen, setIsCompetitionsOpen] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -89,7 +89,7 @@ const Navbar = () => {
 
           {/* Desktop Buttons */}
           <div className="navbar-buttons desktop-only">
-            <button className="btn-login">
+            <button className="btn-login" onClick={() => onNavigate && onNavigate('login')}>
               <span className="btn-text">Login</span>
               <span className="btn-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -143,7 +143,7 @@ const Navbar = () => {
             <a href="#" className="mobile-nav-link">How to Play</a>
             <a href="#" className="mobile-nav-link">Winners</a>
             <div className="mobile-buttons">
-              <button className="btn-login mobile-btn">Login</button>
+              <button className="btn-login mobile-btn" onClick={() => onNavigate && onNavigate('login')}>Login</button>
               <button className="btn-register mobile-btn">Register</button>
             </div>
           </div>
